@@ -1,0 +1,6 @@
+Django
+django-tailwind
+django-compressor
+python-dotenv
+whitenoise
+gunicorn
