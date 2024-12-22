@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section id="hero" class="fade-in">
+        {% include 'components/hero.html' %}
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="slide-up">
+        {% include 'components/about.html' %}
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="slide-up">
+        {% include 'components/experience.html' %}
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="slide-up">
+        {% include 'components/projects.html' %}
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="slide-up">
+        {% include 'components/skills.html' %}
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+        {% include 'components/contact.html' %}
+    </section>
+{% endblock %}
