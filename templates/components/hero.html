@@ -1,22 +1,70 @@
-<section class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600">
-    <div class="container mx-auto px-4 text-center text-white">
-        <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">
-            Hi, I'm Nishant Deswal
-        </h1>
-        <h2 class="text-2xl md:text-3xl mb-8 animate-slide-in">
-            Python Developer & Data Engineer
-        </h2>
-        <p class="text-xl mb-12 max-w-2xl mx-auto">
-            Specializing in data engineering, machine learning, and full-stack development.
-            Currently pursuing Masters in AI & ML at IIIT Lucknow.
-        </p>
-        <div class="flex justify-center gap-4">
-            <a href="#projects" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition duration-300">
-                View Projects
-            </a>
-            <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
-                Contact Me
-            </a>
+<section id="hero" class="min-h-screen relative bg-gradient-to-r from-blue-600 to-purple-600 overflow-hidden">
+    <!-- Animated background -->
+    <div id="particles-js" class="absolute inset-0 z-0"></div>
+    
+    <div class="relative z-10 container mx-auto px-4 h-screen flex items-center">
+        <div class="text-white max-w-3xl">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
+                Hi, I'm <span class="text-yellow-300">Nishant Deswal</span>
+            </h1>
+            
+            <h2 class="text-xl md:text-2xl mb-6">
+                I'm a <span id="typed-text" class="text-blue-200"></span>
+            </h2>
+            
+            <p class="text-lg md:text-xl mb-8 text-gray-200" data-aos="fade-up" data-aos-delay="200">
+                Specializing in data engineering, machine learning, and full-stack development.
+                Currently pursuing Masters in AI & ML at IIIT Lucknow.
+            </p>
+            
+            <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="400">
+                <a href="#projects" 
+                   class="btn-primary bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105">
+                    View Projects
+                </a>
+                <a href="#contact" 
+                   class="btn-secondary border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105">
+                    Contact Me
+                </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="mt-8 flex space-x-4" data-aos="fade-up" data-aos-delay="600">
+                <a href="https://github.com/YourGithub" class="text-white hover:text-yellow-300 transition-colors">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://linkedin.com/in/YourLinkedIn" class="text-white hover:text-yellow-300 transition-colors">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://kaggle.com/YourKaggle" class="text-white hover:text-yellow-300 transition-colors">
+                    <i class="fab fa-kaggle text-2xl"></i>
+                </a>
+            </div>
         </div>
+
+        <!-- Floating Elements -->
+        <div class="absolute right-10 top-1/2 transform -translate-y-1/2 hidden lg:block">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="floating-icon p-4 bg-white/10 backdrop-blur-sm rounded-lg">
+                    <i class="fas fa-code text-4xl text-white"></i>
+                </div>
+                <div class="floating-icon p-4 bg-white/10 backdrop-blur-sm rounded-lg" style="animation-delay: 0.2s;">
+                    <i class="fas fa-database text-4xl text-white"></i>
+                </div>
+                <div class="floating-icon p-4 bg-white/10 backdrop-blur-sm rounded-lg" style="animation-delay: 0.4s;">
+                    <i class="fas fa-brain text-4xl text-white"></i>
+                </div>
+                <div class="floating-icon p-4 bg-white/10 backdrop-blur-sm rounded-lg" style="animation-delay: 0.6s;">
+                    <i class="fas fa-robot text-4xl text-white"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#about" class="text-white">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
     </div>
 </section>

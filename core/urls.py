@@ -5,4 +5,5 @@ app_name = 'core'
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('api/contact/', views.contact, name='contact'),  # Added trailing slash
 ]

@@ -113,6 +113,51 @@
     transform: scale(1.05);
 }
 
+/* Floating animation for hero icons */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Skill bars animation */
+.skill-bar div[data-aos="width"] {
+    width: 0;
+    transition: width 1s ease-out;
+}
+
+/* Skill cards hover effect */
+.skill-card {
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Filter buttons */
+.skill-filter-btn {
+    transition: all 0.3s ease;
+}
+
+.skill-filter-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Animation for skill bar loading */
+@keyframes loadBar {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.skill-bar div {
+    animation: loadBar 1.5s ease-out forwards;
+}
+
 /* Section transitions */
 .section-transition {
     transition: all 0.5s ease-out;
