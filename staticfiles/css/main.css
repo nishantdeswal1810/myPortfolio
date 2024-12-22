@@ -1,0 +1,164 @@
+/* Fade in animation */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+/* Slide up animation */
+.slide-up {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.slide-up.appear {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Scale in animation */
+.scale-in {
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.scale-in.appear {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Navbar scroll effect */
+.navbar-scroll {
+    transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Project card hover effects */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Project card hover effects */
+.project-card {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Skill tag hover effects */
+.skill-tag {
+    transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Image overlay transition */
+.group:hover .group-hover\:opacity-100 {
+    transition-delay: 100ms;
+}
+
+/* Custom animation for project cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
+                opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project-card[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Skill tag hover effects */
+.skill-tag {
+    transition: transform 0.2s ease;
+}
+
+.skill-tag:hover {
+    transform: scale(1.05);
+}
+
+/* Floating animation for hero icons */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Skill bars animation */
+.skill-bar div[data-aos="width"] {
+    width: 0;
+    transition: width 1s ease-out;
+}
+
+/* Skill cards hover effect */
+.skill-card {
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Filter buttons */
+.skill-filter-btn {
+    transition: all 0.3s ease;
+}
+
+.skill-filter-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Animation for skill bar loading */
+@keyframes loadBar {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.skill-bar div {
+    animation: loadBar 1.5s ease-out forwards;
+}
+
+/* Section transitions */
+.section-transition {
+    transition: all 0.5s ease-out;
+}
