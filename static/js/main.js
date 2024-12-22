@@ -85,7 +85,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Python Developer',
                 'Data Engineer',
                 'ML Engineer',
-                'Full Stack Developer'
+                'Gen AI Engineer',
+                'Data Analyst'
             ],
             typeSpeed: 50,
             backSpeed: 30,
