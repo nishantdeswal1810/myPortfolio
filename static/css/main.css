@@ -1,4 +1,4 @@
-/* Fade in animation */
+/* General animations */
 .fade-in {
     opacity: 0;
     transition: opacity 1s ease-in;
@@ -8,7 +8,6 @@
     opacity: 1;
 }
 
-/* Slide up animation */
 .slide-up {
     transform: translateY(50px);
     opacity: 0;
@@ -20,7 +19,6 @@
     opacity: 1;
 }
 
-/* Scale in animation */
 .scale-in {
     transform: scale(0.95);
     opacity: 0;
@@ -32,7 +30,7 @@
     opacity: 1;
 }
 
-/* Navbar scroll effect */
+/* Navbar styles */
 .navbar-scroll {
     transition: all 0.3s ease;
 }
@@ -43,17 +41,7 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Project card hover effects */
-.project-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Project card hover effects */
+/* Project card styles */
 .project-card {
     transform: translateY(0);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -65,22 +53,12 @@
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Skill tag hover effects */
-.skill-tag {
-    transition: all 0.2s ease;
-}
-
-.skill-tag:hover {
-    transform: scale(1.05);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Image overlay transition */
+/* Image overlay transitions */
 .group:hover .group-hover\:opacity-100 {
     transition-delay: 100ms;
 }
 
-/* Custom animation for project cards */
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -92,73 +70,194 @@
     }
 }
 
-.project-card[data-aos="fade-up"] {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
-                opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.project-card[data-aos="fade-up"].aos-animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Skill tag hover effects */
-.skill-tag {
-    transition: transform 0.2s ease;
-}
-
-.skill-tag:hover {
-    transform: scale(1.05);
-}
-
-/* Floating animation for hero icons */
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
 }
 
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .floating-icon {
     animation: float 3s ease-in-out infinite;
-}
-
-/* Skill bars animation */
-.skill-bar div[data-aos="width"] {
-    width: 0;
-    transition: width 1s ease-out;
-}
-
-/* Skill cards hover effect */
-.skill-card {
-    transition: transform 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Filter buttons */
-.skill-filter-btn {
-    transition: all 0.3s ease;
-}
-
-.skill-filter-btn:hover {
-    transform: translateY(-2px);
-}
-
-/* Animation for skill bar loading */
-@keyframes loadBar {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-.skill-bar div {
-    animation: loadBar 1.5s ease-out forwards;
 }
 
 /* Section transitions */
 .section-transition {
     transition: all 0.5s ease-out;
 }
+
+/* Contact Form Styles */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.contact-form button {
+    transition: all 0.2s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-1px);
+}
+
+.contact-form button:active {
+    transform: translateY(0);
+}
+
+/* Alert Message Styles */
+.alert-message {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Dark Mode Styles */
+.dark .navbar-scrolled {
+    background-color: rgba(17, 24, 39, 0.95);
+}
+
+.dark .project-card {
+    background-color: rgb(31, 41, 55);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* Print Styles */
+@media print {
+    .project-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .project-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Skills Section Styles - START */
+.skills-container {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.skills-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 1px;
+    background: rgba(59, 130, 246, 0.1);
+    transform: translate(-50%, -50%);
+}
+
+.skill-tag {
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Skill category colors and hover effects */
+.skill-tag.frontend {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3B82F6;
+}
+
+.skill-tag.frontend:hover {
+    background: #3B82F6;
+    color: white;
+}
+
+.skill-tag.ai-ml {
+    background: rgba(139, 92, 246, 0.1);
+    color: #8B5CF6;
+}
+
+.skill-tag.ai-ml:hover {
+    background: #8B5CF6;
+    color: white;
+}
+
+.skill-tag.data-science {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10B981;
+}
+
+.skill-tag.data-science:hover {
+    background: #10B981;
+    color: white;
+}
+
+.skill-tag.database {
+    background: rgba(245, 158, 11, 0.1);
+    color: #F59E0B;
+}
+
+.skill-tag.database:hover {
+    background: #F59E0B;
+    color: white;
+}
+
+.skill-tag.tools {
+    background: rgba(99, 102, 241, 0.1);
+    color: #6366F1;
+}
+
+.skill-tag.tools:hover {
+    background: #6366F1;
+    color: white;
+}
+
+/* Skills grid layout */
+.skills-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+@media (max-width: 768px) {
+    .skills-container::before {
+        display: none;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    
+    .skill-tag {
+        font-size: 0.8125rem;
+    }
+}
+
+/* Animation for skill tags */
+.skill-tag[data-aos="fade-up"] {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
+                opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.skill-tag[data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+/* Skills Section Styles - END */

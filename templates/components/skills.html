@@ -1,235 +1,116 @@
+{% load static %}
+
 <section id="skills" class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
-        <!-- Title -->
-        <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Skills & Expertise</h2>
+        <!-- Title Section -->
+        <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">
+            Skills & Expertise
+        </h2>
 
-        <!-- Filters -->
-        <div class="flex flex-wrap justify-center gap-3 mb-12">
-            <button class="skill-filter-btn active bg-blue-600 text-white px-4 py-2 rounded-lg transition-all" data-filter="all">All</button>
-            <button class="skill-filter-btn bg-gray-200 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg transition-all" data-filter="programming">Programming</button>
-            <button class="skill-filter-btn bg-gray-200 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg transition-all" data-filter="ai-ml">AI & ML</button>
-            <button class="skill-filter-btn bg-gray-200 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg transition-all" data-filter="data-science">Data Science</button>
-            <button class="skill-filter-btn bg-gray-200 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg transition-all" data-filter="databases">Databases & Tools</button>
-            <button class="skill-filter-btn bg-gray-200 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg transition-all" data-filter="cloud">Cloud & Infrastructure</button>
-        </div>
-
-        <!-- Skills Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <!-- Programming -->
-            <div class="skill-card programming" data-aos="fade-up">
-                <div class="bg-white rounded-lg p-6 shadow-lg h-full flex flex-col">
-                    <div class="flex items-center mb-6">
-                        <i class="fas fa-code text-2xl text-blue-600 mr-3"></i>
-                        <h3 class="text-xl font-bold">Programming</h3>
-                    </div>
-                    <div class="flex-grow space-y-4">
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium">Python</span>
-                                <span class="text-sm font-medium">95%</span>
-                            </div>
-                            <div class="h-2 bg-gray-200 rounded-full">
-                                <div class="h-2 bg-blue-600 rounded-full" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium">JavaScript</span>
-                                <span class="text-sm font-medium">85%</span>
-                            </div>
-                            <div class="h-2 bg-gray-200 rounded-full">
-                                <div class="h-2 bg-blue-600 rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium">HTML/CSS</span>
-                                <span class="text-sm font-medium">80%</span>
-                            </div>
-                            <div class="h-2 bg-gray-200 rounded-full">
-                                <div class="h-2 bg-blue-600 rounded-full" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium">SQL</span>
-                                <span class="text-sm font-medium">90%</span>
-                            </div>
-                            <div class="h-2 bg-gray-200 rounded-full">
-                                <div class="h-2 bg-blue-600 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <p class="text-sm font-medium text-gray-600 mb-2">Frameworks:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Flask</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Django</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Git</span>
-                        </div>
+        <!-- Skills Layout -->
+        <div class="relative max-w-6xl mx-auto">
+         
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
+                <!-- Development -->
+                <div class="space-y-4" data-aos="fade-up">
+                    <h4 class="font-semibold text-gray-700 mb-3">Development</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-blue-100 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-all">
+                            Python
+                        </span>
+                        <span class="skill-tag bg-blue-100 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-all">
+                            JavaScript
+                        </span>
+                        <span class="skill-tag bg-blue-100 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-all">
+                            HTML/CSS
+                        </span>
+                        <span class="skill-tag bg-blue-100 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-all">
+                            Django
+                        </span>
                     </div>
                 </div>
-            </div>
 
-            <!-- AI & ML -->
-            <div class="skill-card ai-ml" data-aos="fade-up">
-                <div class="bg-white rounded-lg p-6 shadow-lg h-full flex flex-col">
-                    <div class="flex items-center mb-6">
-                        <i class="fas fa-brain text-2xl text-purple-600 mr-3"></i>
-                        <h3 class="text-xl font-bold">AI & Machine Learning</h3>
-                    </div>
-                    <div class="flex-grow space-y-4">
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium">TensorFlow</span>
-                                <span class="text-sm font-medium">85%</span>
-                            </div>
-                            <div class="h-2 bg-gray-200 rounded-full">
-                                <div class="h-2 bg-purple-600 rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium">Keras</span>
-                                <span class="text-sm font-medium">80%</span>
-                            </div>
-                            <div class="h-2 bg-gray-200 rounded-full">
-                                <div class="h-2 bg-purple-600 rounded-full" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium">Scikit-learn</span>
-                                <span class="text-sm font-medium">90%</span>
-                            </div>
-                            <div class="h-2 bg-gray-200 rounded-full">
-                                <div class="h-2 bg-purple-600 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <p class="text-sm font-medium text-gray-600 mb-2">Specializations:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">LLMs</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">GenAI</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">RAG</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">NLP</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Deep Learning</span>
-                        </div>
+                <!-- AI & ML -->
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="font-semibold text-gray-700 mb-3">AI & Machine Learning</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-purple-100 text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-600 hover:text-white transition-all">
+                            TensorFlow
+                        </span>
+                        <span class="skill-tag bg-purple-100 text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-600 hover:text-white transition-all">
+                            Keras
+                        </span>
+                        <span class="skill-tag bg-purple-100 text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-600 hover:text-white transition-all">
+                            Scikit-learn
+                        </span>
+                        <span class="skill-tag bg-purple-100 text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-600 hover:text-white transition-all">
+                            LLMs
+                        </span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Data Science -->
-            <div class="skill-card data-science" data-aos="fade-up">
-                <div class="bg-white rounded-lg p-6 shadow-lg h-full flex flex-col">
-                    <div class="flex items-center mb-6">
-                        <i class="fas fa-chart-line text-2xl text-green-600 mr-3"></i>
-                        <h3 class="text-xl font-bold">Data Science</h3>
-                    </div>
-                    <div class="flex-grow space-y-4">
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium">Pandas</span>
-                                <span class="text-sm font-medium">90%</span>
-                            </div>
-                            <div class="h-2 bg-gray-200 rounded-full">
-                                <div class="h-2 bg-green-600 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium">NumPy</span>
-                                <span class="text-sm font-medium">85%</span>
-                            </div>
-                            <div class="h-2 bg-gray-200 rounded-full">
-                                <div class="h-2 bg-green-600 rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <p class="text-sm font-medium text-gray-600 mb-2">Visualization:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Matplotlib</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Seaborn</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">PowerBI</span>
-                        </div>
+                <!-- Data Science -->
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="font-semibold text-gray-700 mb-3">Data Science</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-green-100 text-green-600 px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition-all">
+                            Pandas
+                        </span>
+                        <span class="skill-tag bg-green-100 text-green-600 px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition-all">
+                            NumPy
+                        </span>
+                        <span class="skill-tag bg-green-100 text-green-600 px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition-all">
+                            Matplotlib
+                        </span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Databases & Tools -->
-            <div class="skill-card databases" data-aos="fade-up">
-                <div class="bg-white rounded-lg p-6 shadow-lg h-full flex flex-col">
-                    <div class="flex items-center mb-6">
-                        <i class="fas fa-database text-2xl text-yellow-600 mr-3"></i>
-                        <h3 class="text-xl font-bold">Databases & Tools</h3>
-                    </div>
-                    <div class="flex-grow space-y-4">
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium">MongoDB</span>
-                                <span class="text-sm font-medium">90%</span>
-                            </div>
-                            <div class="h-2 bg-gray-200 rounded-full">
-                                <div class="h-2 bg-yellow-600 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium">MySQL</span>
-                                <span class="text-sm font-medium">85%</span>
-                            </div>
-                            <div class="h-2 bg-gray-200 rounded-full">
-                                <div class="h-2 bg-yellow-600 rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <p class="text-sm font-medium text-gray-600 mb-2">Web Tools:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Selenium</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">BeautifulSoup</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Playwright</span>
-                        </div>
+                <!-- Databases -->
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="font-semibold text-gray-700 mb-3">Databases</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-yellow-100 text-yellow-600 px-4 py-2 rounded-lg hover:bg-yellow-600 hover:text-white transition-all">
+                            MongoDB
+                        </span>
+                        <span class="skill-tag bg-yellow-100 text-yellow-600 px-4 py-2 rounded-lg hover:bg-yellow-600 hover:text-white transition-all">
+                            MySQL
+                        </span>
+                        <span class="skill-tag bg-yellow-100 text-yellow-600 px-4 py-2 rounded-lg hover:bg-yellow-600 hover:text-white transition-all">
+                            PostgreSQL
+                        </span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Cloud & Infrastructure -->
-            <div class="skill-card cloud" data-aos="fade-up">
-                <div class="bg-white rounded-lg p-6 shadow-lg h-full flex flex-col">
-                    <div class="flex items-center mb-6">
-                        <i class="fas fa-cloud text-2xl text-indigo-600 mr-3"></i>
-                        <h3 class="text-xl font-bold">Cloud & Infrastructure</h3>
+                <!-- Cloud & Tools -->
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="font-semibold text-gray-700 mb-3">Cloud & Tools</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-indigo-100 text-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-all">
+                            AWS
+                        </span>
+                        <span class="skill-tag bg-indigo-100 text-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-all">
+                            GCP
+                        </span>
+                        <span class="skill-tag bg-indigo-100 text-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-all">
+                            Docker
+                        </span>
                     </div>
-                    <div class="flex-grow space-y-4">
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium">GCP</span>
-                                <span class="text-sm font-medium">85%</span>
-                            </div>
-                            <div class="h-2 bg-gray-200 rounded-full">
-                                <div class="h-2 bg-indigo-600 rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium">AWS</span>
-                                <span class="text-sm font-medium">90%</span>
-                            </div>
-                            <div class="h-2 bg-gray-200 rounded-full">
-                                <div class="h-2 bg-indigo-600 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <p class="text-sm font-medium text-gray-600 mb-2">Platforms:</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">DigitalOcean</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Streamlit</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Render</span>
-                        </div>
+                </div>
+
+                <!-- Web Tools -->
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="500">
+                    <h4 class="font-semibold text-gray-700 mb-3">Web Tools</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-red-100 text-red-600 px-4 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">
+                            Selenium
+                        </span>
+                        <span class="skill-tag bg-red-100 text-red-600 px-4 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">
+                            BeautifulSoup
+                        </span>
+                        <span class="skill-tag bg-red-100 text-red-600 px-4 py-2 rounded-lg hover:bg-red-600 hover:text-white transition-all">
+                            Playwright
+                        </span>
                     </div>
                 </div>
             </div>

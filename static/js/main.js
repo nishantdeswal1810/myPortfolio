@@ -95,28 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Skills filter functionality
-    const filterButtons = document.querySelectorAll('.skill-filter-btn');
-    const skillCards = document.querySelectorAll('.skill-card');
-
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active', 'bg-blue-600', 'text-white'));
-            button.classList.add('active', 'bg-blue-600', 'text-white');
-            
-            const filter = button.dataset.filter;
-            
-            skillCards.forEach(card => {
-                if (filter === 'all' || card.classList.contains(filter)) {
-                    card.style.display = 'block';
-                    card.classList.add('animate-fade-in');
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
-
     // Contact Form Handling
     const form = document.getElementById('contact-form');
     if (form) {
@@ -188,4 +166,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Add unique animation delay for each skill tag
+    document.querySelectorAll('.skill-tag').forEach((tag, index) => {
+        tag.setAttribute('data-aos-delay', (index * 50).toString());
+    });
 });
